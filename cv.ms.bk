@@ -1,0 +1,33 @@
+.HTML "Curriculum Vitae"
+.TL
+Curriculum Vitae
+.AU
+Rodrigo G. López
+.AI
+.sp
+.CW rgl@antares-labs.eu
+.SH
+Info
+.PP
+My CV was slightly outdated, so I decided to replace it with this
+placeholder until I finish the new one.  You can still access the
+previous version at http://rodri.gl/oldcv.pdf.
+.PS
+spline -> right then up then left then down "Antares" "Labs"
+.PE
+.PS
+circle dashed rad 0.3 "A" "T" "L"
+.PE
+.PS
+box "\s+1\f(PBAntares" "Telecom" "Laboratories\s-1"
+.PE
+.FS
+.PS
+for i = 0.01 to 0.05 by 0.02 do {
+	circle rad 0.35-i at 0, 0 # "\s+2\f(HBA" "T" "L\fP\s-2"
+}
+box invis "\s+2\f(HBA" at last circle.n - (0, 0.175)
+box invis "T" at last circle.c - (0, 0.02)
+box invis "L\fP\s-2" at last circle.s + (0, 0.125)
+.PE
+.FE
