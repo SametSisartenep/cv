@@ -1,6 +1,9 @@
 FONTS='.FP lucidasans'
 NPROC=1
 
+%.ps:	%.jpg
+	lp -dstdout -pjpgpost $prereq > $target
+
 all:VQ: cv.ps cv.pdf
 
 clean:VQ:

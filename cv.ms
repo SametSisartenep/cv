@@ -1,13 +1,14 @@
 .HTML "Rodrigo G. López - Curriculum Vitae"
 .TL
 Curriculum Vitae
+.DA "February 2022"
 .BP face.ps 1.5i 1.5i c 0.5i
 .EP
 .AU
 .ps 14
 .ss 16
 .vs 16
-Rodrigo G. López
+Rodrigo González López
 .AI
 .ps 10
 .ss 12
@@ -36,25 +37,60 @@ LinkedIn:
 .SH
  Languages
 .IP •
-.UL English
-: Advanced. (C1/CAE)
+.UL English :
+Advanced. (C1/CAE)
 .br
 Fluency reading and listening, without problems to express myself, mainly in writing.
 .IP •
-.UL Spanish
-: Native.
-.IP •
-.UL French
-: Basic. (A1-A2)
-.br
-Highlighting reading, with almost no experience listening and writing.
+.UL Spanish :
+Native.
 .SH
 Work Experience
-.IP •
-Computer programmer and System administrator at
+.IP • 2
+Computer programmer and Sysadmin at
 .I "Telfy Telecom S.L.U."
 from December 2019 to the present.
-.IP •
+.IP - 5
+MySQL performance tuning, including filesystem (ext2, ext4, xfs) and
+Linux kernel benchmarking.
+.IP - 5
+On-line hard drive resizing with LVM in VirtualBox, QEMU and oVirt VMs.
+.IP - 5
+Created a centralized rsyslog setup for multiple machines through a
+UDP transport.
+.IP - 5
+Implemented a service to safely truncate logs whenever they reached a
+certain size, using C and the inotify(7) API.
+.IP - 5
+Installed and configured an Asterisk 11 PBX with enough functionality
+to allow for two SIP lines to talk to each other.
+.IP - 5
+Installed oVirt 3.6 and 4.x with a hosted engine for NFS and iSCSI
+benchmarking.
+.IP - 5
+Created web applications with JS, PHP, PostgreSQL and Python to
+provide internal services for the FTTH Dept.  like technicians's work
+report registration, antennae maintenance notifications, fiber optics
+coverage queries issued by clients and custom-format labels for
+network segments and distribution boxes.
+.IP - 5
+Set up the services to provide IPv6 connectivity to all our clients,
+using ISC's Kea and its API through custom Python scripts to manage
+leases and host reservations, along with a DDNS service to sync
+against an internal BIND instance.  I also integrated the new
+functionality with our internal ACS, used to provision the clients's
+CPE/ONT.
+.IP - 5
+Helped colleagues from the Technical Support and Systems departments
+with system administration, data processing, automation and networking
+tasks regarding Linux.
+.IP - 5
+Worked on the migration of a monolithic web platform into a set of
+REST web services using PHP, MySQL and MongoDB, including a search
+engine where I designed the Docker container infrastructure for its
+development along with the CI/CD pipeline using Jenkins and Ansible
+playbooks.
+.IP • 2
 Programmer at
 .I everis
 from April 2017 to August 2018.  I worked on four projects for a
@@ -66,19 +102,19 @@ project, evaluating several formulary windows, fields, layouts and
 parametrization.  There was also a project using speech recognition,
 where I learned a bit about finite state grammars, language models and
 speech-to-text synthesis.
-.IP •
+.IP • 2
 Technical support at
 .I SolidQ
 during Spring of 2016.  I helped customers with software setup and
 configuration, and also worked with the internal support team to
 update documentation and manage clients' subscriptions.
-.IP •
+.IP • 2
 English-Spanish translator at
 .I Node.js
 in Spring and Summer of 2015.  I worked with the Node spanish
 community to translate the documents of every version, developer
 publications and the API, along with examples for C++ and Javascript.
-.IP •
+.IP • 2
 Backend Engineer at
 .I "Caribe Activo"
 during Spring of 2015.  I operated their Unix systems, setting up
@@ -90,7 +126,7 @@ Technical Experience and Skills
 I use
 .B "Plan 9"
 on a daily basis, along with
-.B OpenBSD
+.B FreeBSD
 and
 .B Linux .
 I designed and implemented my home/laboratory network,
@@ -101,7 +137,16 @@ and a
 server handling its own SOA (Start of Authority) using Plan 9, along
 with a
 .B TFTP
-service so that machines can bootup automatically through PXE.
+service so that machines can bootup automatically through
+.B PXE .
+Most of the systems inside this network are virtual and hosted on
+.B FreeBSD
+with
+.B Bhyve ,
+using a custom VM management toolset I developed.
+I also use
+.B jails(8)
+for some of my services.
 .IP •
 I'm proficient with
 .B C
@@ -156,19 +201,9 @@ as version control systems.
 .IP •
 I've built infrastructure for testing and build automation with
 .B QEMU/KVM ,
-and I've used the
-.B VirtualBox
+.B Bhyve ,
 and
-.B Hyper-V
-hypervisors for little projects.
-.IP •
-With respect to my programming style, I focus on making my software
-.B simple ,
-.B clear
-and
-.B consistent
-above everything.  It has proven to be the best for development and
-future maintenance.
+.B VirtualBox.
 .IP •
 I have experience using
 .B "soldering iron"
@@ -179,43 +214,10 @@ temperatures ranging from 200 to 400°C.  I've also used
 to clean some joints and non-corrosive
 .B flux .
 .IP •
-I use my
+I also have some experience using a
 .B "digital oscilloscope"
-very often to analyze signals and properties of the hardware I work
-on, although the features I use have been very simple so far.
-.IP •
-In my previous company I introduced a couple new people to our
-project, and walked them through our code and
-.I "modus operandi" .
-In the following months we became an effective team, dealing hand on
-hand with the client and supporting each other throughout the
-development cycle.
-.SH
-Past Experience
-.IP
-.B C++ :
-simple text adventures, Pong clone with SDL, a little 2D rigid body physics
-library.
-.br
-.B Go :
-HTTP(S) servers, a little wiki.
-.br
-.B Java :
-2D platform/side scrolling prototypes and a couple of games, Apache
-Cordova basic plugin patching.
-.br
-.B JavaScript :
-Node.js web servers, tools and a web interface for controlling a
-Parrot AR Drone 2.
-.br
-.B Python :
-Django apps, a basic web crawler over Tor, SSH bruteforcing.
-.br
-.B Ruby :
-Rails apps.
-.br
-.B PHP :
-A social network with a LAMP stack.
+to analyze signals and properties of the hardware I work on, although
+the features I use have been very simple so far.
 .SH
 Education
 .IP •
