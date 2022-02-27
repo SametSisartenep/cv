@@ -35,7 +35,7 @@ LinkedIn:
 .SM
 .CW https://www.linkedin.com/in/rodrigo-g-lópez-178744178/
 .SH
- Languages
+Languages
 .IP •
 .UL English :
 Advanced. (C1/CAE)
@@ -49,7 +49,7 @@ Work Experience
 .IP • 2
 Computer programmer and Sysadmin at
 .I "Telfy Telecom S.L.U."
-from December 2019 to the present.
+since December 2019.
 .IP - 5
 MySQL performance tuning, including filesystem (ext2, ext4, xfs) and
 Linux kernel benchmarking.
@@ -201,9 +201,9 @@ as version control systems.
 .IP •
 I've built infrastructure for testing and build automation with
 .B QEMU/KVM ,
-.B Bhyve ,
+.B Bhyve
 and
-.B VirtualBox.
+.B VirtualBox .
 .IP •
 I have experience using
 .B "soldering iron"

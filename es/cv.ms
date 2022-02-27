@@ -1,32 +1,31 @@
+.HTML "Rodrigo G. López - Curriculum Vitae"
 .TL
 Curriculum Vitae
+.DA "Febrero de 2022"
 .BP face.ps 1.5i 1.5i c 0.5i
 .EP
 .AU
 .ps 14
 .ss 16
 .vs 16
-Rodrigo G. López
+Rodrigo González López
 .AI
 .ps 10
 .ss 12
 .vs 12
 .CW rgl@antares-labs.eu
-.CW "Albatera, Alicante"
+.CW "Catral, Alicante 03158"
 .CW "(+34)657 23 86 86"
 .SH
 Información personal
 .PP
-Nacido en abril de 1997
-.sp
-.PP
 Sitio web:
 .SM
-.CW http://rgl.antares-labs.eu/about
+.CW http://rgl.antares-labs.eu
 .PP
 Software público:
 .SM
-.CW http://antares-labs.eu/downloads
+.CW http://git.antares-labs.eu
 .PP
 GitHub:
 .SM
@@ -45,16 +44,55 @@ Lenguajes
 .IP •
 .UL Español
 : Nativo.
-.IP •
-.UL Francés
-: Básico. (A1-A2)
-.br
-.I "Sobresaltando lectura, sin apenas experiencia escuchando y escribiendo."
-.IP •
-.UL Alemán
-: Muy básico (aprendiendo).
 .SH
 Experiencia Laboral
+.IP • 2
+Programador y Sysadmin en
+.I "Telfy Telecom S.L.U."
+desde Diciembre de 2019.
+.IP - 5
+Análisis y mejora de rendimiento de MySQL, incluyendo benchmarking de
+sistemas de ficheros (ext2, ext4, xfs) y el kernel Linux.
+.IP - 5
+Redimensionado on-line de discos duros con LVM en VMs de VirtualBox,
+QEMU y oVirt.
+.IP - 5
+Creé un rsyslog centralizado para varias máquinas utilizando
+transporte UDP.
+.IP - 5
+Implementé un servicio para truncar logs de forma segura cuando
+llegaran a cierto tamaño, utilizando C y la API de inotify(7).
+.IP - 5
+Instalé y configuré un PBX con Asterisk 11, con la funcionalidad
+suficiente como para permitir que dos líneas SIP se comunicaran entre
+sí.
+.IP - 5
+Instalé oVirt 3.6 y 4.x con Hosted Engine para analizar el redimiento
+de NFS y iSCSI.
+.IP - 5
+Creé aplicaciones web con JS, PHP, PostgreSQL y Python para
+proporcionar servicios internos al Dept.  de FTTH, como el registro de
+partes de trabajo de los técnicos, notificaciones sobre el
+mantenimiento de antenas, consultas de cobertura sobre el servicio de
+fibra óptica, y etiquetados con formato personalizado para tramos de
+red y cajas de distribución.
+.IP - 5
+Monté los servicios para proporcionar conectividad IPv6 a todos
+nuestros clientes, utilizando ISC Kea y su API a través de Python para
+gestionar leases y reservas de host, junto con un servicio de DDNS
+para sincronizarse contra una instancia interna de BIND.  También
+integré la nueva funcionalidad con nuestro ACS interno, que se utiliza
+para provisionar el CPE/ONT de cada cliente.
+.IP - 5
+Ayudé a mis compañeros de los departamentos de Soporte Técnico y
+Sistemas con tareas de administración de sistemas, procesamiento de
+datos, automatización y redes, relativas a Linux.
+.IP - 5
+Trabajé en la migración de una plataforma web monolítica a un conjunto
+de servicios REST, utilizando PHP, MySQL y MongoDB, incluyendo un
+motor de búsqueda, donde diseñé la infraestructura de contenedores
+Docker para su desarrollo, junto con una pipeline de CI/CD utilizando
+Jenkins y playbooks de Ansible.
 .IP •
 Programador en
 .I everis
@@ -93,7 +131,7 @@ Experiencia Técnica y Habilidades
 Utilizo
 .B "Plan 9"
 a diario, además de
-.B OpenBSD
+.B FreeBSD
 y
 .B Linux .
 Diseñé e implementé la red de mi casa/laboratorio, incluyendo
@@ -104,7 +142,15 @@ manejando su propia SOA (Start of Authority) utilizando Plan 9, además
 de un servicio
 .B TFTP
 para que otras máquinas puedan arrancar automáticamente a través de
-PXE.
+.B PXE .
+La mayor parte de los sistemas dentro de la red son virtuales, hospedados en
+.B FreeBSD
+con
+.B Bhyve ,
+utilizando un toolset de gestión de VMs que he desarrollado.
+También utilizo
+.B jails(8)
+para algunos de mis servicios.
 .IP •
 Soy proficiente con
 .B C
@@ -160,19 +206,9 @@ como sistemas de control de versiones.
 He construído infraestructura para pruebas y automatización de
 construcciones con
 .B QEMU/KVM ,
-y he utilizado los hipervisores
-.B VirtualBox
+.B Bhyve
 y
-.B Hyper-V
-para pequeños proyectos.
-.IP •
-Respecto a mi estilo de programación, trato de hacer mi software
-.B simple ,
-.B claro
-y
-.B consistente
-por encima de todo.  Ha demostrado ser lo mejor para el desarrollo y
-futuro mantenimiento.
+.B VirtualBox .
 .IP •
 Tengo experiencia utilizando
 .B "soldadores"
@@ -184,44 +220,11 @@ para limpiar uniones y
 .B flux
 no corrosivo.
 .IP •
-Utilizo mi
+También tengo experiencia utilizando un 
 .B "osciloscopio digital"
-a menudo para analizar señales y propiedades del hardware con el que
+para analizar señales y propiedades del hardware con el que
 trabajo, aunque las características que utilizo han sido muy sencillas
 hasta ahora.
-.IP •
-En mi empresa anterior introduje a un par de personas nuevas a nuestro
-proyecto, les mostré el código paso a paso, además del
-.I "modus operandi" .
-En los próximos meses nos convertimos en un equipo efectivo, tratando
-con el cliente mano a mano y ayudándonos durante el ciclo de
-desarrollo.
-.SH
-Experiencia Pasada
-.IP
-.B C++ :
-aventuras de texto simples, un clon de Pong con SDL, una pequeña
-biblioteca para físicas de cuerpos rígidos en 2D.
-.br
-.B Go :
-Servidores HTTP(S), una pequeña wiki.
-.br
-.B Java :
-prototipos de plataformas/side scrolling en 2D y un par de juegos,
-parcheo básico de plugins para Cordova.
-.br
-.B JavaScript :
-servidores web, herramientas y una interfaz web para controlar un
-Parrot AR Drone 2 con Node.js.
-.br
-.B Python :
-apps de Django, un web crawler básico sobre Tor, SSH bruteforcing.
-.br
-.B Ruby :
-apps de Rails.
-.br
-.B PHP :
-Una red social con una pila LAMP.
 .SH
 Educación
 .IP •
